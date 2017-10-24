@@ -1,2 +1,2 @@
-# tasker-ed
-Collection of my handwritten tasker automatons
+# 1. SRM WiFi Login
+requires root, qpython, py-dependencies (requests, rsa, urllib3) and patience
