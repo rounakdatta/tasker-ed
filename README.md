@@ -7,4 +7,6 @@ requires root, qpython, py-dependencies (requests, rsa, urllib3) and patience
 ~~requires root~~
 requires termux (with Python, {requests, rsa}) _includes auto-install script_
 
+>pip install -r requirements.txt
+
 Login code by : [thewisenerd](https://github.com/thewisenerd/check.point.automaton)
