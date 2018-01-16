@@ -1,0 +1,417 @@
+<TaskerData sr="" dvi="1" tv="5.0u7m">
+	<Task sr="task11">
+		<cdate>1515082301543</cdate>
+		<edate>1516106208275</edate>
+		<id>11</id>
+		<nme>AcademicPlannerTable</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%TodayDate</Str>
+			<Str sr="arg1" ve="3">%DATE</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>597</code>
+			<Str sr="arg0" ve="3">%TodayDate</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="2"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">%TodayDate</Str>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%temp</lhs>
+					<op>8</op>
+					<rhs>3</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%TodayDate</Str>
+			<Int sr="arg1">
+				<var>300</var>
+			</Int>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%temp</lhs>
+					<op>8</op>
+					<rhs>4</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%TodayDate</Str>
+			<Int sr="arg1">
+				<var>400</var>
+			</Int>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>945317509</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<AccountName>rounakdatta12@gmail.com</AccountName>
+					<AccountName-type>java.lang.String</AccountName-type>
+					<OutputMode>OUTPUT_ARRAYS</OutputMode>
+					<OutputMode-type>java.lang.String</OutputMode-type>
+					<QueryMode>0</QueryMode>
+					<QueryMode-type>java.lang.Integer</QueryMode-type>
+					<SpreadsheetKey>1zLFHNNDJXwW9MCQ94oslxNnph--RG_2kFX54ZC_ge2s</SpreadsheetKey>
+					<SpreadsheetKey-type>java.lang.String</SpreadsheetKey-type>
+					<SpreadsheetName>academicplanner_rounakdatta</SpreadsheetName>
+					<SpreadsheetName-type>java.lang.String</SpreadsheetName-type>
+					<WorksheetName>Sheet 1</WorksheetName>
+					<WorksheetName-type>java.lang.String</WorksheetName-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>Query academicplanner_rounakdatta</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>WorksheetName</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>java.lang.String</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.uitcon.spreadsheettaskerplugin</Str>
+			<Str sr="arg2" ve="3">com.uitcon.spreadsheettaskerplugin.activities.QueryActivity</Str>
+			<Int sr="arg3" val="20"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Str sr="arg1" ve="3">%row1cells(4), %row2cells(4), %row3cells(4), %row4cells(4), %row5cells(4), %row6cells(4), %row7cells(4), %row8cells(4), %row9cells(4), %row10cells(4), %row11cells(4), %row12cells(4), %row13cells(4), %row14cells(4), %row15cells(4), %row16cells(4), %row17cells(4), %row18cells(4), %row19cells(4), %row20cells(4), %row21cells(4), %row22cells(4),  %row23cells(4), %row24cells(4), %row25cells(4), %row26cells(4), %row27cells(4), %row28cells(4), %row29cells(4), %row30cells(4), %row31cells(4)</Str>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DateCounter</lhs>
+					<op>8</op>
+					<rhs>%TodayDate</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>597</code>
+			<Str sr="arg0" ve="3">%DATE</Str>
+			<Int sr="arg1" val="4"/>
+			<Int sr="arg2" val="2"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">%temp</Str>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">Yay</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%TODAYDO</Str>
+			<Str sr="arg1" ve="3">%CURRDO</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act23" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">TimeTable</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act24" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act25" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act26" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Str sr="arg1" ve="3">200</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act27" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Str sr="arg1" ve="3">%row1cells(9), %row2cells(9), %row3cells(9), %row4cells(9), %row5cells(9), %row6cells(9), %row7cells(9), %row8cells(9), %row9cells(9), %row10cells(9), %row11cells(9), %row12cells(9), %row13cells(9), %row14cells(9), %row15cells(9), %row16cells(9), %row17cells(9), %row18cells(9), %row19cells(9), %row20cells(9), %row21cells(9), %row22cells(9),  %row23cells(9), %row24cells(9), %row25cells(9), %row26cells(9), %row27cells(9), %row28cells(9), %row29cells(9), %row30cells(9), %row31cells(9)</Str>
+		</Action>
+		<Action sr="act28" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act29" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DateCounter</lhs>
+					<op>8</op>
+					<rhs>%TodayDate</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Str sr="arg1" ve="3">100</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act30" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act31" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">Yay</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act32" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%TODAYDO</Str>
+			<Str sr="arg1" ve="3">%CURRDO</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act33" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">TimeTable</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act34" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act35" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act36" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Str sr="arg1" ve="3">300</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act37" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Str sr="arg1" ve="3">%row1cells(14), %row2cells(14), %row3cells(14), %row4cells(14), %row5cells(14), %row6cells(14), %row7cells(14), %row8cells(14), %row9cells(14), %row10cells(14), %row11cells(14), %row12cells(14), %row13cells(14), %row14cells(14), %row15cells(14), %row16cells(14), %row17cells(14), %row18cells(14), %row19cells(14), %row20cells(14), %row21cells(14), %row22cells(14),  %row23cells(14), %row24cells(14), %row25cells(14), %row26cells(14), %row27cells(14), %row28cells(14), %row29cells(14), %row30cells(14), %row31cells(14)</Str>
+		</Action>
+		<Action sr="act38" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act39" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DateCounter</lhs>
+					<op>8</op>
+					<rhs>%TodayDate</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%temp</lhs>
+					<op>8</op>
+					<rhs>1</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act40" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act41" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">Yay</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act42" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%TODAYDO</Str>
+			<Str sr="arg1" ve="3">%CURRDO</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act43" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">TimeTable</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act44" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act45" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act46" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Str sr="arg1" ve="3">400</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act47" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Str sr="arg1" ve="3">%row1cells(24), %row2cells(24), %row3cells(24), %row4cells(24), %row5cells(24), %row6cells(24), %row7cells(24), %row8cells(24), %row9cells(24), %row10cells(24), %row11cells(24), %row12cells(24), %row13cells(24), %row14cells(24), %row15cells(24), %row16cells(24), %row17cells(24), %row18cells(24), %row19cells(24), %row20cells(24), %row21cells(24), %row22cells(24),  %row23cells(24), %row24cells(24), %row25cells(24), %row26cells(24), %row27cells(24), %row28cells(24), %row29cells(24), %row30cells(24), %row31cells(24)</Str>
+		</Action>
+		<Action sr="act48" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act49" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%DateCounter</lhs>
+					<op>8</op>
+					<rhs>%TodayDate</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%TodayDate</Str>
+			<Int sr="arg1">
+				<var>100</var>
+			</Int>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act50" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">%CURRDO</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act51" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">Yay</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act52" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%TODAYDO</Str>
+			<Str sr="arg1" ve="3">%CURRDO</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act53" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">TimeTable</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act54" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act55" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act56" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%DateCounter</Str>
+			<Str sr="arg1" ve="3">0</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%temp</lhs>
+					<op>8</op>
+					<rhs>2</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>888</code>
+			<Str sr="arg0" ve="3">%TodayDate</Str>
+			<Int sr="arg1">
+				<var>200</var>
+			</Int>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>38</code>
+		</Action>
+	</Task>
+</TaskerData>
