@@ -14,7 +14,7 @@ Login code by : [thewisenerd](https://github.com/thewisenerd/check.point.automat
 
 # 2. SRM Timetable Generator
 
-- Grab the following tables (in raw HTML format) from [academia.srmuniv.ac.in](academia.srmuniv.ac.in) :
+- Grab the following tables (in raw HTML format) from [academia.srmuniv.ac.in](https://academia.srmuniv.ac.in/) :
   ⬛ Academic Planner (for knowing the day order for the particular day)
   ⬛ Time Table (for knowing the various slots of the day order)
   ⬛ Courses Table (for knowing which courses correspond to the respective slots)
