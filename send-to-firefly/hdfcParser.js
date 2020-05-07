@@ -17,20 +17,29 @@ function getMoneyDirection(payload) {
     return null
 }
 
+function transformDateFormat(originalDate) {
+    let splitDate = originalDate.split("-")
+    let alteredDate = new Date([splitDate[1], splitDate[0], splitDate[2]].join("-"))
+
+    let offset = +530;
+    alteredDate = new Date(alteredDate.getTime() + (offset*60*1000))
+    return alteredDate.toISOString().split('T')[0]
+}
+
 function constructPayloadJson(type, date, amount, notes) {
     let boilerplate = `
     {
         "transactions": [
             {
                 "type": "withdrawal",
-                "date": "2020-04-19",
-                "amount": "1",
+                "date": "",
+                "amount": "",
                 "description": "",
                 "source_id": -1,
                 "source_name": "",
-                "destination_id": 6,
-                "destination_name": "(no name)",
-                "category_name": "Food",
+                "destination_id": 12,
+                "destination_name": "HDFC Bank",
+                "category_name": "",
                 "interest_date": "",
                 "book_date": "",
                 "process_date": "",
@@ -43,13 +52,13 @@ function constructPayloadJson(type, date, amount, notes) {
         ]
     }`;
 
-    let source_id = 12;
-    let source_name = "HDFC Bank";
+    let source_id = 5;
+    let source_name = "(no name)";
     let description = notes;
 
     let jsonObject = JSON.parse(boilerplate);
     jsonObject.transactions[0].type = type;
-    jsonObject.transactions[0].date = date;
+    jsonObject.transactions[0].date = transformDateFormat(date);
     jsonObject.transactions[0].amount = amount;
     jsonObject.transactions[0].description = description;
     jsonObject.transactions[0].source_id = source_id;
@@ -57,6 +66,37 @@ function constructPayloadJson(type, date, amount, notes) {
     jsonObject.transactions[0].notes = notes;
 
     return JSON.stringify(jsonObject)
+}
+
+function postTransaction(data, host, personalAccessToken) {
+    console.log(data);
+
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+        console.log(this.responseText);
+    }
+    });
+
+    xhr.open("POST", host + "/money/api/v1/transactions");
+    xhr.setRequestHeader("Connection", "keep-alive");
+    xhr.setRequestHeader("Pragma", "no-cache");
+    xhr.setRequestHeader("Cache-Control", "no-cache");
+    xhr.setRequestHeader("Accept", "application/json, text/plain, */*");
+    xhr.setRequestHeader("Sec-Fetch-Dest", "empty");
+    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36");
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.setRequestHeader("Origin", host);
+    xhr.setRequestHeader("Sec-Fetch-Site", "same-origin");
+    xhr.setRequestHeader("Sec-Fetch-Mode", "cors");
+    xhr.setRequestHeader("Accept-Language", "en-US,en;q=0.9");
+    xhr.setRequestHeader("Authorization", "Bearer " + personalAccessToken);
+    xhr.setRequestHeader("Content-Type", "text/plain");
+
+    xhr.send(data);
 }
 
 class Debit {
@@ -103,7 +143,10 @@ class Credit {
     }
 }
 
-var sms = "Rs. 101.00 credited to a/c XXXXXX1234 on 08-02-20 by a/c linked to VPA 9999@apl (UPI Ref No  1234)."
+var host = global("FireflyHost")
+var personalAccessToken = global("FireflyPersonalAccessToken")
+
+var sms = "Rs. 101.00 credited to a/c XXXXXX1234 on 04-05-20 by a/c linked to VPA 9999@apl (UPI Ref No  1234)."
 var transactionObject = null
 
 if (getMoneyDirection(sms) == MoneyDirection.DEBIT) {
@@ -118,3 +161,4 @@ var transactionAmount = transactionObject.getAmount();
 var transactionNotes = transactionObject.getTransactionDescription();
 
 var payloadJson = constructPayloadJson(transactionType, transactionDate, transactionAmount, transactionNotes);
+postTransaction(payloadJson, host, personalAccessToken);
