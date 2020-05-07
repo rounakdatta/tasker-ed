@@ -69,14 +69,14 @@ function constructPayloadJson(type, date, amount, notes) {
 }
 
 function postTransaction(data, host, personalAccessToken) {
-    console.log(data);
+    flash(data);
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
     xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-        console.log(this.responseText);
+        flash(this.responseText);
     }
     });
 
@@ -143,10 +143,12 @@ class Credit {
     }
 }
 
-var host = global("FireflyHost")
-var personalAccessToken = global("FireflyPersonalAccessToken")
+var host = global("%FireflyHost")
+var personalAccessToken = global("%FireflyPersonalAccessToken")
+var sms = global("%FireflySmsPayload")
 
-var sms = "Rs. 101.00 credited to a/c XXXXXX1234 on 04-05-20 by a/c linked to VPA 9999@apl (UPI Ref No  1234)."
+flash(sms);
+
 var transactionObject = null
 
 if (getMoneyDirection(sms) == MoneyDirection.DEBIT) {
