@@ -81,17 +81,11 @@ function postTransaction(data, host, personalAccessToken) {
     });
 
     xhr.open("POST", host + "/money/api/v1/transactions");
-    xhr.setRequestHeader("Connection", "keep-alive");
     xhr.setRequestHeader("Pragma", "no-cache");
     xhr.setRequestHeader("Cache-Control", "no-cache");
-    xhr.setRequestHeader("Accept", "application/json, text/plain, */*");
-    xhr.setRequestHeader("Sec-Fetch-Dest", "empty");
+    xhr.setRequestHeader("Accept", "application/json, text/plain, /");
     xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36");
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhr.setRequestHeader("Origin", host);
-    xhr.setRequestHeader("Sec-Fetch-Site", "same-origin");
-    xhr.setRequestHeader("Sec-Fetch-Mode", "cors");
     xhr.setRequestHeader("Accept-Language", "en-US,en;q=0.9");
     xhr.setRequestHeader("Authorization", "Bearer " + personalAccessToken);
     xhr.setRequestHeader("Content-Type", "text/plain");
